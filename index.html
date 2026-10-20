@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Chủ - Nexora Tech Store Phụ Kiện & Thiết Bị Công Nghệ</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Nexora Tech Store</div>
+    <nav class="navbar">
+      <a href="index.html" class="active">Trang chủ</a>
+      <a href="products.html">Sản phẩm</a>
+      <a href="cart.html">Giỏ hàng (<span id="cart-count">0</span>)</a>
+      <a href="checkout.html">Thanh toán</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="hero-content">
+        <h1>Nâng Tầm Trải Nghiệm Công Nghệ & Gaming</h1>
+        <p>Cung cấp điện thoại flagship, sò lạnh tản nhiệt từ tính và Gaming Gear chính hãng với giá tốt nhất.</p>
+        <a href="products.html" class="btn-hero">Xem Tất Cả Sản Phẩm &rarr;</a>
+      </div>
+    </section>
+
+    <!-- Khối Danh Mục Nổi Bật -->
+    <section class="section-block">
+      <h2 class="section-title">Danh Mục Nổi Bật</h2>
+      <div class="category-grid">
+        <div class="cat-card">
+          <h3>📱 Điện Thoại & Tablet</h3>
+          <p>Màn hình sắc nét, cấu hình cực mạnh</p>
+        </div>
+        <div class="cat-card">
+          <h3>❄️ Phụ Kiện Tản Nhiệt</h3>
+          <p>Sò lạnh bán dẫn, sạc GaN siêu nhanh</p>
+        </div>
+        <div class="cat-card">
+          <h3>🖱️ Gaming Gear</h3>
+          <p>Chuột, phím cơ phản hồi chuẩn xác</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Khối Sản Phẩm Bán Chạy (Render bằng JS) -->
+    <section class="section-block">
+      <div class="section-header-flex">
+        <h2 class="section-title">Sản Phẩm Bán Chạy</h2>
+        <a href="products.html" class="link-see-more">Xem thêm &rarr;</a>
+      </div>
+      <div id="home-featured-grid" class="product-grid">
+        <!-- Render 3 sản phẩm nổi bật từ JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Nexora Tech Store - Đồ Án Thiết Kế Web</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Gọi render 3 sản phẩm nổi bật khi trang tải xong
+    document.addEventListener("DOMContentLoaded", () => {
+      renderFeaturedProducts();
+    });
+  </script>
+</body>
+</html>

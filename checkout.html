@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh Toán - Nexora Tech Store</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Nexora Tech Store</div>
+    <nav class="navbar">
+      <a href="index.html">Trang chủ</a>
+      <a href="products.html">Sản phẩm</a>
+      <a href="cart.html">Giỏ hàng (<span id="cart-count">0</span>)</a>
+      <a href="checkout.html" class="active">Thanh toán</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Thông Tin Giao Hàng & Thanh Toán</h1>
+
+    <div class="checkout-wrapper">
+      <!-- FORM 1: Bắt buộc tối thiểu 6 loại input + Validation JS -->
+      <form id="checkout-form" class="checkout-form" novalidate>
+        
+        <!-- 1. Text: Họ tên -->
+        <div class="form-control">
+          <label for="fullname">Họ và tên người nhận <span class="required">*</span></label>
+          <input type="text" id="fullname" placeholder="Ví dụ: Võ Trịnh Quốc Khang">
+          <small class="error-msg"></small>
+        </div>
+
+        <!-- 2. Email -->
+        <div class="form-control">
+          <label for="email">Địa chỉ Email <span class="required">*</span></label>
+          <input type="email" id="email" placeholder="example@gmail.com">
+          <small class="error-msg"></small>
+        </div>
+
+        <!-- 3. Phone (Số điện thoại) -->
+        <div class="form-control">
+          <label for="phone">Số điện thoại liên hệ <span class="required">*</span></label>
+          <input type="tel" id="phone" placeholder="Nhập 10 chữ số (VD: 0912345678)">
+          <small class="error-msg"></small>
+        </div>
+
+        <!-- 4. Select: Tỉnh / Thành phố -->
+        <div class="form-control">
+          <label for="city">Tỉnh / Thành phố nhận hàng <span class="required">*</span></label>
+          <select id="city">
+            <option value="">-- Chọn Tỉnh / Thành phố --</option>
+            <option value="tay-ninh">Tây Ninh</option>
+            <option value="tphcm">TP. Hồ Chí Minh</option>
+            <option value="ha-noi">Hà Nội</option>
+            <option value="binh-duong">Bình Dương</option>
+          </select>
+          <small class="error-msg"></small>
+        </div>
+
+        <!-- 5. Date: Ngày nhận hàng dự kiến -->
+        <div class="form-control">
+          <label for="delivery-date">Ngày giao hàng mong muốn <span class="required">*</span></label>
+          <input type="date" id="delivery-date">
+          <small class="error-msg"></small>
+        </div>
+
+        <!-- 6. Radio: Phương thức thanh toán -->
+        <div class="form-control">
+          <label>Phương thức thanh toán <span class="required">*</span></label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="payment" value="cod" checked> Thanh toán khi nhận hàng (COD)
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="payment" value="banking"> Chuyển khoản QR Ngân hàng / Ví điện tử
+            </label>
+          </div>
+          <small class="error-msg"></small>
+        </div>
+
+        <!-- 7. Textarea: Địa chỉ cụ thể & Ghi chú -->
+        <div class="form-control">
+          <label for="address">Địa chỉ nhà chi tiết & Ghi chú <span class="required">*</span></label>
+          <textarea id="address" rows="3" placeholder="Số nhà, đường, ấp/khu phố, phường/xã..."></textarea>
+          <small class="error-msg"></small>
+        </div>
+
+        <button type="submit" class="btn-checkout" style="width: 100%; border: none;">Xác Nhận Đặt Hàng</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Nexora Tech Store - Đồ Án Thiết Kế Web</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
+</body>
+</html>

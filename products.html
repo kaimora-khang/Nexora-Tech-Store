@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sản Phẩm - Nexora Tech Store</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="logo">Nexora Tech Store</div>
+    <nav class="navbar">
+      <a href="index.html">Trang chủ</a>
+      <a href="products.html" class="active">Sản phẩm</a>
+      <a href="cart.html">Giỏ hàng (<span id="cart-count">0</span>)</a>
+      <a href="checkout.html">Thanh toán</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Danh Sách Sản Phẩm</h1>
+
+    <!-- FORM 2: Form Tìm kiếm & Lọc (Xử lý động qua JS, không reload trang) -->
+ <section class="filter-section">
+      <form id="filter-form" class="filter-form" onsubmit="event.preventDefault()">
+        <!-- Ô tìm kiếm theo tên -->
+        <div class="filter-group">
+          <label for="search-input">Tìm kiếm theo tên:</label>
+          <input type="text" id="search-input" placeholder="Nhập tên sản phẩm (iPhone, Laptop, Bàn phím...)...">
+        </div>
+
+        <!-- Lựa chọn danh mục chi tiết -->
+        <div class="filter-group">
+          <label for="category-select">Danh mục:</label>
+          <select id="category-select">
+            <option value="all">Tất cả danh mục (100+ món)</option>
+            <option value="phone">📱 Điện thoại & Tablet</option>
+            <option value="laptop">💻 Laptop Gaming & MacBook</option>
+            <option value="gear">⌨️ Bàn phím & Chuột Gaming</option>
+            <option value="audio">🎧 Tai nghe & Âm thanh</option>
+            <option value="watch">⌚ Đồng hồ & Smartwatch</option>
+            <option value="accessory">🔋 Pin sạc, Ốp lưng & Cường lực</option>
+          </select>
+        </div>
+
+        <!-- Bộ lọc khoảng giá -->
+        <div class="filter-group">
+          <label for="max-price">Mức giá tối đa: <span id="price-val" style="color: #38bdf8; font-weight: bold;">100.000.000đ</span></label>
+          <input type="range" id="max-price" min="100000" max="100000000" step="500000" value="100000000">
+        </div>
+      </form>
+    </section>
+
+    <!-- Khu vực render danh sách sản phẩm bằng DOM JS -->
+    <section id="product-grid" class="product-grid">
+      <!-- Sản phẩm sẽ được render tự động ở đây -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Nexora Tech Store - Đồ Án Thiết Kế Web</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

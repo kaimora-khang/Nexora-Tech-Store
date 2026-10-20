@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi Tiết Sản Phẩm - Nexora Tech Store</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Nexora Tech Store</div>
+    <nav class="navbar">
+      <a href="index.html">Trang chủ</a>
+      <a href="products.html">Sản phẩm</a>
+      <a href="cart.html">Giỏ hàng (<span id="cart-count">0</span>)</a>
+      <a href="checkout.html">Thanh toán</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.9rem;">
+      <a href="index.html" style="color: #64748b; text-decoration: none;">Trang chủ</a> / 
+      <a href="products.html" style="color: #64748b; text-decoration: none;">Sản phẩm</a> / 
+      <span id="breadcrumb-current" style="color: #0284c7; font-weight: 500;">Chi tiết</span>
+    </div>
+
+    <!-- Khung render chi tiết bằng JS -->
+    <div id="product-detail-container" class="detail-wrapper">
+      <!-- Nội dung chi tiết sẽ được đổ vào đây -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Nexora Tech Store - Đồ Án Thiết Kế Web</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      renderDetailPage();
+    });
+  </script>
+</body>
+</html>

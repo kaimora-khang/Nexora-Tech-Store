@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ Hàng - Nexora Tech Store</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Nexora Tech Store</div>
+    <nav class="navbar">
+      <a href="index.html">Trang chủ</a>
+      <a href="products.html">Sản phẩm</a>
+      <a href="cart.html" class="active">Giỏ hàng (<span id="cart-count">0</span>)</a>
+      <a href="checkout.html">Thanh toán</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Giỏ Hàng Của Bạn</h1>
+
+    <div class="cart-wrapper">
+      <div id="cart-items-container" class="cart-items-container">
+        <!-- Render các món trong giỏ hàng bằng JS -->
+      </div>
+
+      <div class="cart-summary">
+        <h3>Tổng tiền giỏ hàng</h3>
+        <div class="summary-row">
+          <span>Tạm tính:</span>
+          <span id="subtotal-price">0đ</span>
+        </div>
+        <div class="summary-row">
+          <span>Phí vận chuyển:</span>
+          <span>Miễn phí</span>
+        </div>
+        <hr style="margin: 1rem 0; border: none; border-top: 1px solid #e2e8f0;">
+        <div class="summary-row total-row">
+          <strong>Tổng cộng:</strong>
+          <strong id="total-price" style="color: #e11d48; font-size: 1.3rem;">0đ</strong>
+        </div>
+        <a href="checkout.html" class="btn-checkout" style="display: block; text-align: center; text-decoration: none; margin-top: 1.5rem;">Tiến Hành Thanh Toán</a>
+        <a href="products.html" class="btn-continue" style="display: block; text-align: center; text-decoration: none; margin-top: 0.8rem; color: #64748b;">&larr; Tiếp tục mua sắm</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Nexora Tech Store - Đồ Án Thiết Kế Web</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Tự động gọi render giỏ hàng khi trang cart.html tải xong
+    document.addEventListener("DOMContentLoaded", () => {
+      renderCartPage();
+    });
+  </script>
+</body>
+</html>
